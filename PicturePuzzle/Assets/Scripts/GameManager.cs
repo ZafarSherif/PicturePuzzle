@@ -84,6 +84,9 @@ public class GameManager : MonoBehaviour
 
     public void onMouseDrag()
     {
+    
+        if (!startScrollObj)
+            return;
         int rowNum = startScrollObj.GetComponent<CellObject>().getRowNumber();
         int colNum = startScrollObj.GetComponent<CellObject>().getColNumber();
         Vector2 mousePosition = new Vector2 (Input.mousePosition.x, Input.mousePosition.y);
